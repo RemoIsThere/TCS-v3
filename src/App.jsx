@@ -5,6 +5,18 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Projects from './pages/Projects';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import { useLocation } from 'react-router-dom';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   useEffect(() => {
@@ -33,6 +45,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background relative selection:bg-gold selection:text-black font-outfit text-text-primary flex flex-col">
+      <ScrollToTop />
       
       {/* Elegant Ambient Background */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
@@ -57,6 +70,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/ongoing-projects" element={<Projects />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </div>
         <Footer />

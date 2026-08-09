@@ -28,3 +28,178 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #D4AF37;
 }
+
+/* ==========================================================================
+   Leaflet Custom Dark & Gold Luxury Styling
+   ========================================================================== */
+.leaflet-container {
+  background-color: #080808 !important;
+  font-family: 'Outfit', sans-serif !important;
+}
+
+/* Hide default leaflet div icon white box */
+.custom-leaflet-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.custom-marker-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.marker-pulse {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.4);
+  animation: leaflet-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes leaflet-ping {
+  75%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.marker-pin {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 2;
+}
+
+.custom-marker-wrapper:hover .marker-pin {
+  transform: scale(1.4);
+}
+
+.marker-pin.ongoing {
+  background: #D4AF37;
+  border: 2px solid #000;
+  box-shadow: 0 0 12px #D4AF37, 0 0 20px rgba(212, 175, 55, 0.6);
+}
+
+.marker-pin.completed {
+  background: #10B981;
+  border: 2px solid #000;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.marker-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.marker-dot-completed {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.marker-label {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 10, 10, 0.9);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.custom-marker-wrapper:hover .marker-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(2px);
+}
+
+/* Custom Dark Popup */
+.techcity-dark-popup .leaflet-popup-content-wrapper {
+  background: rgba(12, 12, 12, 0.95) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.15) !important;
+  color: #fff !important;
+  padding: 8px 6px !important;
+}
+
+.techcity-dark-popup .leaflet-popup-content {
+  margin: 8px 12px !important;
+  line-height: 1.4 !important;
+}
+
+.techcity-dark-popup .leaflet-popup-tip {
+  background: rgba(12, 12, 12, 0.95) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  box-shadow: none !important;
+}
+
+.techcity-dark-popup .leaflet-popup-close-button {
+  color: #D4AF37 !important;
+  padding: 6px 8px 0 0 !important;
+  font-size: 16px !important;
+}
+
+.techcity-dark-popup .leaflet-popup-close-button:hover {
+  color: #fff !important;
+}
+
+/* Leaflet Zoom Control Styling */
+.leaflet-control-zoom {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  background-color: rgba(15, 15, 15, 0.9) !important;
+  color: #D4AF37 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.2s ease !important;
+}
+
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+  background-color: #D4AF37 !important;
+  color: #000 !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(5, 5, 5, 0.7) !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-size: 10px !important;
+  border-top-left-radius: 6px;
+}
+
+.leaflet-control-attribution a {
+  color: rgba(212, 175, 55, 0.7) !important;
+  text-decoration: none !important;
+}
+

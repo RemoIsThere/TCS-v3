@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Mail, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -8,9 +9,9 @@ export default function Footer() {
         
         {/* Brand */}
         <div>
-          <a href="#" className="flex items-center group mb-6">
+          <Link to="/" className="flex items-center group mb-6">
             <img src="/logo.png" alt="TechCity Skills" className="h-12 w-auto object-contain" />
-          </a>
+          </Link>
           <p className="text-sm text-text-secondary font-light">Empowering the next generation of tech leaders.</p>
         </div>
         
@@ -18,9 +19,10 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-xs">Quick Links</h4>
           <ul className="space-y-3 text-sm text-text-secondary font-light">
-            <li><a href="#" className="hover:text-gold transition-colors">About Us</a></li>
-            <li><a href="#" className="hover:text-gold transition-colors">Success Stories</a></li>
-            <li><a href="#" className="hover:text-gold transition-colors">Careers</a></li>
+            <li><Link to="/about" className="hover:text-gold transition-colors">About Us</Link></li>
+            <li><Link to="/projects" className="hover:text-gold transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-gold"></span>Ongoing Projects</Link></li>
+            <li><a href="/#courses" className="hover:text-gold transition-colors">Featured Programs</a></li>
+            <li><a href="/#success" className="hover:text-gold transition-colors">Success Stories</a></li>
           </ul>
         </div>
         
@@ -57,8 +59,8 @@ export default function Footer() {
       <div className="w-full max-w-[1400px] mx-auto border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-secondary/50 font-light">
         <p>&copy; 2026 TechCity Skills Pvt. Ltd. All rights reserved.</p>
         <div className="flex gap-4">
-          <a href="#" className="hover:text-white transition-colors">Privacy</a>
-          <a href="#" className="hover:text-white transition-colors">Terms</a>
+          <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+          <Link to="/terms" className="hover:text-white transition-colors">Terms</Link>
         </div>
       </div>
     </footer>
