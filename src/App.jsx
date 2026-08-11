@@ -49,9 +49,9 @@ function App() {
       
       {/* Elegant Ambient Background */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] bg-gold/5 blur-[150px] rounded-full mix-blend-screen opacity-70"></div>
-        <div className="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-white/5 blur-[150px] rounded-full mix-blend-screen opacity-50"></div>
-        <div className="absolute top-[40%] left-[60%] w-[30vw] h-[30vw] bg-gold/5 blur-[120px] rounded-full mix-blend-screen opacity-40"></div>
+        <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] bg-gold/5 blur-[96px] rounded-full opacity-70"></div>
+        <div className="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] bg-white/5 blur-[96px] rounded-full opacity-50"></div>
+        <div className="absolute top-[40%] left-[60%] w-[30vw] h-[30vw] bg-gold/5 blur-[96px] rounded-full opacity-40"></div>
         <div 
           className="absolute inset-0 opacity-[0.03]"
           style={{

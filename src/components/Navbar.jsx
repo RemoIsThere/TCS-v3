@@ -56,7 +56,7 @@ export default function Navbar() {
               className="relative group text-sm font-medium tracking-wide text-text-secondary hover:text-white transition-colors duration-300"
             >
               Programs
-              <span className="absolute -bottom-2 left-1/2 w-0 h-[2px] bg-gold group-hover:w-full group-hover:left-0 transition-all duration-300 ease-out rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-gold group-hover:w-full transition-all duration-300 ease-out rounded-full"></span>
             </a>
 
             <Link 
@@ -70,8 +70,8 @@ export default function Navbar() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
               </span>
               Ongoing Projects
-              <span className={`absolute -bottom-2 left-1/2 h-[2px] bg-gold transition-all duration-300 ease-out rounded-full ${
-                isProjectsActive ? 'w-full left-0' : 'w-0 group-hover:w-full group-hover:left-0'
+              <span className={`absolute -bottom-2 left-0 h-[2px] bg-gold transition-all duration-300 ease-out rounded-full ${
+                isProjectsActive ? 'w-full' : 'w-0 group-hover:w-full'
               }`}></span>
             </Link>
             
@@ -82,8 +82,8 @@ export default function Navbar() {
               }`}
             >
               About
-              <span className={`absolute -bottom-2 left-1/2 h-[2px] bg-gold transition-all duration-300 ease-out rounded-full ${
-                isAboutActive ? 'w-full left-0' : 'w-0 group-hover:w-full group-hover:left-0'
+              <span className={`absolute -bottom-2 left-0 h-[2px] bg-gold transition-all duration-300 ease-out rounded-full ${
+                isAboutActive ? 'w-full' : 'w-0 group-hover:w-full'
               }`}></span>
             </Link>
             
@@ -92,7 +92,7 @@ export default function Navbar() {
               className="relative group text-sm font-medium tracking-wide text-text-secondary hover:text-white transition-colors duration-300"
             >
               Success Stories
-              <span className="absolute -bottom-2 left-1/2 w-0 h-[2px] bg-gold group-hover:w-full group-hover:left-0 transition-all duration-300 ease-out rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-gold group-hover:w-full transition-all duration-300 ease-out rounded-full"></span>
             </a>
           </div>
 

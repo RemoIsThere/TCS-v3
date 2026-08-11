@@ -31,16 +31,16 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-wrap items-center gap-6">
-            <button className="bg-gold text-black px-8 py-4 rounded-sm font-semibold hover:bg-gold-light transition-all duration-300">
+            <a href="#courses" className="inline-block bg-gold text-black px-8 py-4 rounded-sm font-semibold hover:bg-gold-light transition-all duration-300">
               Explore Programs
-            </button>
+            </a>
             
-            <button className="flex items-center gap-3 px-8 py-4 rounded-sm font-medium text-white group hover:text-gold transition-colors">
+            <a href="#courses" className="flex items-center gap-3 px-8 py-4 rounded-sm font-medium text-white group hover:text-gold transition-colors">
               <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-gold transition-colors">
                 <Play className="w-4 h-4" />
               </div>
               Watch Demo
-            </button>
+            </a>
           </div>
         </motion.div>
         

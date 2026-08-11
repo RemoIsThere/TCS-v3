@@ -42,7 +42,7 @@ export default function Courses() {
       <div className="w-full max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Featured Programs</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Featured Modules</h2>
             <p className="text-text-secondary font-light">Intensive, outcome-driven tracks.</p>
           </div>
           
@@ -83,9 +83,9 @@ export default function Courses() {
                   <span className="block text-[10px] text-text-secondary uppercase tracking-wider mb-1">Key Module</span>
                   <span className="text-sm text-white font-medium">{course.module}</span>
                 </div>
-                <button className="w-10 h-10 flex items-center justify-center border border-white/10 rounded-sm group-hover:bg-gold group-hover:text-black group-hover:border-gold transition-all">
+                <a href="#cta" className="w-10 h-10 flex items-center justify-center border border-white/10 rounded-sm group-hover:bg-gold group-hover:text-black group-hover:border-gold transition-all">
                    <ArrowRight className="w-4 h-4" />
-                </button>
+                </a>
               </div>
             </div>
           ))}
