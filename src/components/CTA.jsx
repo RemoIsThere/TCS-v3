@@ -6,17 +6,34 @@ export default function CTA() {
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    // Construct the mailto link
-    const subject = encodeURIComponent('Contact from Website');
-    const body = encodeURIComponent(`${message}\n\nFrom: ${email}`);
-    window.location.href = `mailto:techcityskillspvt.ltd@gmail.com?subject=${subject}&body=${body}`;
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    setSubmitted(true);
-    setEmail('');
-    setMessage('');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      await fetch("https://formsubmit.co/ajax/techcityskillspvt.ltd@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            email,
+            message,
+            _subject: "New Contact Form Submission from TechCity Skills"
+        })
+      });
+      setSubmitted(true);
+      setEmail('');
+      setMessage('');
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -50,16 +67,17 @@ export default function CTA() {
               ></textarea>
               <button 
                 type="submit" 
-                className="bg-gold hover:bg-gold-light text-black px-10 py-4 rounded-sm font-semibold transition-all text-sm w-full md:w-auto self-center mt-2"
+                disabled={isSubmitting}
+                className={`bg-gold text-black px-10 py-4 rounded-sm font-semibold transition-all text-sm w-full md:w-auto self-center mt-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-gold-light'}`}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           ) : (
             <div className="flex flex-col items-center justify-center gap-4">
               <div className="flex items-center justify-center gap-3 text-gold">
                 <CheckCircle2 className="w-6 h-6" />
-                <span className="font-medium">Opening your email client...</span>
+                <span className="font-medium">Message sent successfully! We'll get back to you soon.</span>
               </div>
               <button 
                 onClick={() => setSubmitted(false)}
