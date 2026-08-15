@@ -61,14 +61,10 @@ export default function Navbar() {
 
             <Link 
               to="/projects" 
-              className={`relative group text-sm font-medium tracking-wide transition-colors duration-300 flex items-center gap-1.5 ${
+              className={`relative group text-sm font-medium tracking-wide transition-colors duration-300 ${
                 isProjectsActive ? 'text-gold' : 'text-text-secondary hover:text-white'
               }`}
             >
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
-              </span>
               Ongoing Projects
               <span className={`absolute -bottom-2 left-0 h-[2px] bg-gold transition-all duration-300 ease-out rounded-full ${
                 isProjectsActive ? 'w-full' : 'w-0 group-hover:w-full'
@@ -91,7 +87,7 @@ export default function Navbar() {
               href="/#success" 
               className="relative group text-sm font-medium tracking-wide text-text-secondary hover:text-white transition-colors duration-300"
             >
-              Success Stories
+              Testimonials
               <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-gold group-hover:w-full transition-all duration-300 ease-out rounded-full"></span>
             </a>
           </div>
@@ -99,12 +95,12 @@ export default function Navbar() {
           {/* Desktop Right CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              to="/projects"
+              to="/requirements"
               className="relative group px-6 py-2.5 rounded-full overflow-hidden border border-gold/40 bg-gold/10 hover:bg-gold/20 hover:border-gold hover:shadow-[0_0_20px_rgba(212,175,55,0.25)] transition-all duration-500 flex items-center gap-2"
             >
               <Radio className="w-3.5 h-3.5 text-gold animate-pulse" />
               <span className="relative z-10 text-[12px] font-bold text-gold tracking-widest uppercase group-hover:text-gold-light transition-colors duration-300">
-                Live Projects
+                Requirements
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/15 to-gold/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></div>
             </Link>
@@ -147,7 +143,6 @@ export default function Navbar() {
                 }`}
               >
                 <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gold animate-ping"></span>
                   Ongoing Projects
                 </span>
                 <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-gold/20 text-gold border border-gold/30">
@@ -168,7 +163,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-text-secondary hover:text-gold transition-colors py-2"
               >
-                Success Stories
+                Testimonials
               </a>
               <div className="pt-4">
                 <Link

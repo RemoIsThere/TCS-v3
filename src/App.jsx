@@ -8,6 +8,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import Requirements from './pages/Requirements';
 import { useLocation } from 'react-router-dom';
 
 function ScrollToTop() {
@@ -72,6 +73,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/ongoing-projects" element={<Projects />} />
+            <Route path="/requirements" element={<Requirements />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
           </Routes>

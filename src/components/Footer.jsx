@@ -20,9 +20,9 @@ export default function Footer() {
           <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-xs">Quick Links</h4>
           <ul className="space-y-3 text-sm text-text-secondary font-light">
             <li><Link to="/about" className="hover:text-gold transition-colors">About Us</Link></li>
-            <li><Link to="/projects" className="hover:text-gold transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-gold"></span>Ongoing Projects</Link></li>
+            <li><Link to="/projects" className="hover:text-gold transition-colors">Ongoing Projects</Link></li>
             <li><a href="/#courses" className="hover:text-gold transition-colors">Featured Programs</a></li>
-            <li><a href="/#success" className="hover:text-gold transition-colors">Success Stories</a></li>
+            <li><a href="/#success" className="hover:text-gold transition-colors">Testimonials</a></li>
           </ul>
         </div>
         

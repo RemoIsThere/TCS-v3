@@ -266,14 +266,8 @@ export default function About() {
                 WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at 50% 50%, #000 20%, transparent 100%)'
               }}
             ></div>
-            <div className="absolute inset-0 flex items-center justify-center text-text-secondary/10 font-bold text-7xl tracking-widest uppercase rotate-[-45deg] select-none">
-              VISION
-            </div>
-            {/* Elegant luxury overlay geometric emblem */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 border border-gold/30 rounded-full flex items-center justify-center">
-              <div className="w-24 h-24 border border-gold/50 rounded-xl transform rotate-45 flex items-center justify-center">
-                <Compass className="w-10 h-10 text-gold transform -rotate-45" />
-              </div>
+            <div className="absolute inset-0 flex items-center justify-center p-12">
+              <img src="/logo.png" alt="TechCity Skills" className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.3)]" />
             </div>
             {/* Corner Badges */}
             <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/70 backdrop-blur-md border border-white/10 flex items-center justify-between">

@@ -5,6 +5,7 @@ import Courses from '../components/Courses';
 import Stats from '../components/Stats';
 import ProjectsPreview from '../components/ProjectsPreview';
 import Testimonials from '../components/Testimonials';
+import Gallery from '../components/Gallery';
 import CTA from '../components/CTA';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Stats />
       <Features />
       <Courses />
+      <Gallery />
       <ProjectsPreview />
       <Testimonials />
       <CTA />

@@ -13,7 +13,7 @@ export default function Testimonials() {
   return (
     <section id="success" className="py-24 px-6 lg:px-12 bg-surface overflow-hidden border-b border-white/5">
       <div className="w-full max-w-[1400px] mx-auto mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Success Stories</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Testimonials</h2>
         <p className="text-text-secondary font-light">Meet the alumni who transformed their careers with us.</p>
       </div>
       
