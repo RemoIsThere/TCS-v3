@@ -80,7 +80,7 @@ export default function Hero() {
 
             {/* Logo — animated float + glow */}
             <motion.img
-              src="/removed bg logo.png"
+              src="/removed-bg-logo.png"
               alt="TechCity Skills"
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
