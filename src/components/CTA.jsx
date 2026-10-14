@@ -38,7 +38,7 @@ export default function CTA() {
 
   return (
     <section id="cta" className="py-24 px-6 lg:px-12 relative z-10 border-b border-white/5">
-      <div className="max-w-4xl mx-auto bg-surface border border-white/5 rounded-sm p-12 md:p-20 text-center relative overflow-hidden">
+      <div className="max-w-4xl mx-auto bg-surface border border-white/5 rounded-sm p-8 sm:p-12 md:p-20 text-center relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gold/5 blur-[100px] pointer-events-none"></div>
         
         <div className="relative z-10">

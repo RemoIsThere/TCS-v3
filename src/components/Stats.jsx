@@ -35,7 +35,7 @@ export default function Stats() {
   return (
     <section className="py-16 border-b border-white/5 bg-surface relative z-20">
       <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-20">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 divide-x-0 lg:divide-x lg:divide-white/5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-8 divide-x-0 lg:divide-x lg:divide-white/5">
           <div className="text-center px-4">
             <h3 className="text-4xl font-bold text-white mb-2 flex justify-center">
               <CountUp target={10000} />+

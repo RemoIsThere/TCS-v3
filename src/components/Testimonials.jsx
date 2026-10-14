@@ -24,7 +24,7 @@ export default function Testimonials() {
           transition={{ duration: 30, ease: "linear", repeat: Infinity }}
         >
           {[...testimonials, ...testimonials].map((t, i) => (
-            <div key={i} className="w-[400px] shrink-0 bg-background border border-white/5 p-8 rounded-sm">
+            <div key={i} className="w-[320px] sm:w-[400px] shrink-0 bg-background border border-white/5 p-6 sm:p-8 rounded-sm">
               <Quote className="w-8 h-8 text-gold/50 mb-6" />
               <p className="text-white text-lg mb-8 font-light leading-relaxed">"{t.quote}"</p>
               <div className="flex items-center gap-4">

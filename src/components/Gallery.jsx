@@ -1,35 +1,36 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Maximize2, X, Sparkles } from 'lucide-react';
+import { Maximize2, X, Sparkles, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const trainingImages = [
   {
-    src: "/training/1.jpeg",
+    src: "/gallery/1.jpeg",
     title: "Interactive Classroom Training",
     category: "Cohort Session"
   },
   {
-    src: "/training/2.jpeg",
+    src: "/gallery/2.jpeg",
     title: "Hands-on Technical Workshop",
     category: "Live Engineering"
   },
   {
-    src: "/training/3.jpeg",
+    src: "/gallery/3.jpeg",
     title: "1:1 Mentorship & Code Review",
     category: "Practical Guidance"
   },
   {
-    src: "/training/4.jpeg",
+    src: "/gallery/4.jpeg",
     title: "Collaborative Student Lab",
     category: "Team Projects"
   },
   {
-    src: "/training/5.jpeg",
+    src: "/gallery/5.jpeg",
     title: "Specialized Technical Seminars",
     category: "System Design"
   },
   {
-    src: "/training/6.jpeg",
+    src: "/gallery/6.jpeg",
     title: "Industry Readiness & Demonstrations",
     category: "Project Showcase"
   }
@@ -43,20 +44,26 @@ export default function Gallery() {
       {/* Subtle background glow */}
       <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-[140px] pointer-events-none"></div>
 
-      <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold/30 mb-4 bg-gold/5">
             <Sparkles className="w-3.5 h-3.5 text-gold" />
-            <span className="text-xs font-bold tracking-widest text-gold uppercase">Campus & Labs</span>
+            <span className="text-xs font-bold tracking-widest text-gold uppercase">Campus &amp; Labs</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Training Sessions</h2>
           <p className="text-text-secondary font-light max-w-xl">
             Glimpses of our immersive, hands-on engineering programs and real classroom cohorts.
           </p>
         </div>
-        <p className="text-xs text-text-secondary/70 italic hidden md:block">
-          Click any photo to enlarge
-        </p>
+
+        {/* Visit Gallery CTA */}
+        <Link
+          to="/gallery"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-black font-bold text-xs uppercase tracking-widest hover:bg-gold-light transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)] group shrink-0 self-start sm:self-auto"
+        >
+          <span>Visit Gallery</span>
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </Link>
       </div>
       
       {/* Infinite scrolling marquee */}
@@ -70,7 +77,7 @@ export default function Gallery() {
             <div 
               key={i} 
               onClick={() => setSelectedImage(item)}
-              className="w-[300px] md:w-[450px] h-[210px] md:h-[300px] shrink-0 rounded-2xl overflow-hidden bg-[#121212] border border-white/10 relative group/card hover:border-gold/50 transition-all duration-300 shadow-xl cursor-pointer"
+              className="w-[280px] sm:w-[380px] md:w-[450px] h-[190px] sm:h-[260px] md:h-[300px] shrink-0 rounded-2xl overflow-hidden bg-[#121212] border border-white/10 relative group/card hover:border-gold/50 transition-all duration-300 shadow-xl cursor-pointer"
             >
               {/* Image element */}
               <img 
@@ -132,7 +139,7 @@ export default function Gallery() {
                 />
               </div>
 
-              <div className="p-5 bg-surface border-t border-white/10 flex items-center justify-between">
+              <div className="p-5 bg-surface border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gold bg-gold/15 px-2.5 py-0.5 rounded-full border border-gold/30">
                     {selectedImage.category}
@@ -148,4 +155,3 @@ export default function Gallery() {
     </section>
   );
 }
-

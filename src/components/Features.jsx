@@ -30,7 +30,7 @@ export default function Features() {
         
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((f, i) => (
-            <div key={i} className="group bg-surface p-10 border border-white/5 hover:border-gold/30 transition-all duration-300 rounded-sm relative overflow-hidden">
+            <div key={i} className="group bg-surface p-8 sm:p-10 border border-white/5 hover:border-gold/30 transition-all duration-300 rounded-sm relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-0.5 bg-gold transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></div>
               
               <div className="w-12 h-12 bg-white/5 flex items-center justify-center text-gold mb-8 rounded-sm">

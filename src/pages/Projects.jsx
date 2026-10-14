@@ -298,7 +298,7 @@ export default function Projects() {
           </span>
         </div>
         
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
           TechCity Skills <span className="text-gold">Project Footprint</span>
         </h1>
         
@@ -415,7 +415,7 @@ export default function Projects() {
         </div>
 
         {/* Map View Frame */}
-        <div className="relative w-full h-[550px] lg:h-[640px] rounded-xl overflow-hidden border border-white/10 shadow-inner bg-[#080808]">
+        <div className="relative w-full h-[380px] sm:h-[480px] lg:h-[640px] rounded-xl overflow-hidden border border-white/10 shadow-inner bg-[#080808]">
           <div ref={mapContainerRef} className="w-full h-full z-0" />
 
           {/* Floating Dark Glass Legend */}

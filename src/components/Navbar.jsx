@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Radio } from 'lucide-react';
+import { Menu, X, Radio, GalleryHorizontal } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,6 +23,7 @@ export default function Navbar() {
 
   const isProjectsActive = location.pathname === '/projects' || location.pathname === '/ongoing-projects';
   const isAboutActive = location.pathname === '/about';
+  const isGalleryActive = location.pathname === '/gallery';
 
   return (
     <motion.nav 
@@ -80,6 +81,18 @@ export default function Navbar() {
               About
               <span className={`absolute -bottom-2 left-0 h-[2px] bg-gold transition-all duration-300 ease-out rounded-full ${
                 isAboutActive ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}></span>
+            </Link>
+            
+            <Link 
+              to="/gallery" 
+              className={`relative group text-sm font-medium tracking-wide transition-colors duration-300 ${
+                isGalleryActive ? 'text-gold' : 'text-text-secondary hover:text-white'
+              }`}
+            >
+              Gallery
+              <span className={`absolute -bottom-2 left-0 h-[2px] bg-gold transition-all duration-300 ease-out rounded-full ${
+                isGalleryActive ? 'w-full' : 'w-0 group-hover:w-full'
               }`}></span>
             </Link>
             
@@ -157,6 +170,16 @@ export default function Navbar() {
                 }`}
               >
                 About Us
+              </Link>
+              <Link 
+                to="/gallery" 
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-2 border-b border-white/5 flex items-center gap-2 ${
+                  isGalleryActive ? 'text-gold font-bold' : 'text-text-secondary hover:text-gold'
+                }`}
+              >
+                <GalleryHorizontal className="w-4 h-4" />
+                Training Gallery
               </Link>
               <a 
                 href="/#success" 

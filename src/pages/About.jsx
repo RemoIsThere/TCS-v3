@@ -101,7 +101,7 @@ export default function About() {
           <span className="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
           <span className="text-xs font-bold tracking-widest text-gold uppercase">About TechCity Skills</span>
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
           Redefining Tech Education & Leadership.
         </h1>
         <p className="text-lg text-text-secondary font-light leading-relaxed">
@@ -117,7 +117,7 @@ export default function About() {
               <Sparkles className="w-4 h-4 text-gold" />
               <span>Executive Leadership</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
               Meet Our Directors
             </h2>
           </div>
